@@ -12,11 +12,6 @@ Instructions:
     ├── Book Series
     	├── Boook
 
-    Expected Library Format:
-    Author
-    |_Book Series
-      |_Book
-
 ### Release Notes [Version 1.0.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release):
 * Configure Button: Allows user to select the root location for their audiobook library
 * Refresh Button: Reloads the directory tree from the set Library Path
