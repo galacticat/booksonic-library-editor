@@ -1,7 +1,6 @@
-# booksonic-library-editor
-
-Current Release: [Version 1.0.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
-
+# Booksonic Library Editor
+### Current Release: [Version 1.0.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
+![picture alt](https://github.com/galacticat/booksonic-library-editor/blob/master/Booksonic%20Library%20Editor.png)
 
 Instructions:
 1. Download both the .exe and .msi and run the .exe to install.
