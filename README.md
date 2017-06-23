@@ -4,7 +4,8 @@ Current Release: [Version 1.0.0](https://github.com/galacticat/booksonic-library
 
 
 Instructions:
-1. Use the Configuration button to select the root location of your Booksonic library.
+1. Download both the .exe and .msi and run the .exe to install.
+2. Use the Configuration button to select the root location of your Booksonic library.
 
 ### Expected Directory Structure
     .
