@@ -1,0 +1,20 @@
+H:\Booksonic Library Editor\Booksonic Editor\bin\Debug\Booksonic Editor.exe.config
+H:\Booksonic Library Editor\Booksonic Editor\bin\Debug\Booksonic Editor.exe
+H:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csprojResolveAssemblyReference.cache
+H:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Editor.resources
+H:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Properties.Resources.resources
+H:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csproj.GenerateResource.Cache
+H:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic Editor.exe
+H:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic Editor.pdb
+H:\Booksonic Library Editor\Booksonic Editor\bin\Debug\Booksonic Editor.pdb
+E:\Booksonic Library Editor\Booksonic Editor\bin\Debug\Booksonic Editor.exe.config
+E:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic Editor.exe
+E:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic Editor.pdb
+E:\Booksonic Library Editor\Booksonic Editor\bin\Debug\Booksonic Editor.exe
+E:\Booksonic Library Editor\Booksonic Editor\bin\Debug\Booksonic Editor.pdb
+E:\Booksonic Library Editor\Booksonic Editor\bin\Debug\Booksonic Editor.exe.CodeAnalysisLog.xml
+E:\Booksonic Library Editor\Booksonic Editor\bin\Debug\Booksonic Editor.exe.lastcodeanalysissucceeded
+E:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csprojResolveAssemblyReference.cache
+E:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Editor.resources
+E:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Properties.Resources.resources
+E:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csproj.GenerateResource.Cache
