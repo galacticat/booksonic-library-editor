@@ -1,7 +1,7 @@
 # booksonic-library-editor
 
-Current Release:
-https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release
+Current Release: [Version 1.0.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
+
 
 Instructions:
 1. Use the Configuration button to select the root location of your Booksonic library.
@@ -17,7 +17,7 @@ Instructions:
     |_Book Series
       |_Book
 
-### Release Notes (Version 1.0.0):
+### Release Notes [Version 1.0.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release):
 * Configure Button: Allows user to select the root location for their audiobook library
 * Refresh Button: Reloads the directory tree from the set Library Path
 * Search (Hotkey: Enter): Allows users to enter the name of a book or author and search for the tree node.
