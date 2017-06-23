@@ -1,0 +1,8 @@
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\bin\Release\Booksonic Editor.exe.config
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\bin\Release\Booksonic Editor.exe
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\bin\Release\Booksonic Editor.pdb
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Release\Booksonic_Editor.Editor.resources
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Release\Booksonic_Editor.Properties.Resources.resources
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Release\Booksonic Library Editor.csproj.GenerateResource.Cache
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Release\Booksonic Editor.exe
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Release\Booksonic Editor.pdb

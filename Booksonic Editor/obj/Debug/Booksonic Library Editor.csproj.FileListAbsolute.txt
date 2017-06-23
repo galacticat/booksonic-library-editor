@@ -18,3 +18,12 @@ E:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.
 E:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Editor.resources
 E:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Properties.Resources.resources
 E:\Booksonic Library Editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csproj.GenerateResource.Cache
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\bin\Debug\Booksonic Editor.exe.config
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Editor.exe
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Editor.pdb
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\bin\Debug\Booksonic Editor.exe
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\bin\Debug\Booksonic Editor.pdb
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csprojResolveAssemblyReference.cache
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Editor.resources
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Properties.Resources.resources
+C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csproj.GenerateResource.Cache
