@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booksonic Library Editor", 
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Booksonic Setup", "Booksonic Setup\Booksonic Setup.vdproj", "{DA0F87E4-49EB-4843-BE13-AC7EAE34024C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{50667633-E67A-4CA0-9285-4F9C06C20ECD}"
+	ProjectSection(SolutionItems) = preProject
+		Booksonic Library Editor.png = Booksonic Library Editor.png
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="libraryPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Library Test</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="javaPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

@@ -66,6 +66,9 @@ namespace Booksonic_Editor
         {
             this.timer1.Interval = 1000;
             timer1.Start();
+            Properties.Settings.Default.tempCoverPath = String.Empty;
+            Properties.Settings.Default.Save();
+            imageToLoad_value.Visible = false;
             if (Properties.Settings.Default.scriptPath != String.Empty)
             {
                 this.script_button.Enabled = true;
@@ -122,8 +125,13 @@ namespace Booksonic_Editor
             string descPath = fullPath + @"\desc.txt";
             File.WriteAllText(readerPath, reader_textBox.Text);
             desc_textBox.SaveFile(descPath, RichTextBoxStreamType.PlainText);
-            System.IO.File.Copy(tempCoverPath,cover_textBox.Text);
-            Properties.Settings.Default.tempCoverPath = String.Empty;
+            if (tempCoverPath != String.Empty)
+            { 
+                System.IO.File.Copy(tempCoverPath,cover_textBox.Text);
+                Properties.Settings.Default.tempCoverPath = String.Empty;
+                Properties.Settings.Default.Save();
+                imageToLoad_value.Visible = false;
+            }
             save_button.Enabled = false;
         }
 
@@ -300,6 +308,9 @@ namespace Booksonic_Editor
                 book_title.Text = "No Selection";
                 save_button.Enabled = false;
             }
+            Properties.Settings.Default.tempCoverPath = String.Empty;
+            Properties.Settings.Default.Save();
+            imageToLoad_value.Visible = false;
             //loads the reader.txt value
             if (System.IO.File.Exists(readerPath))
             {
@@ -417,15 +428,20 @@ namespace Booksonic_Editor
             DialogResult result = choofdlog.ShowDialog();
             if (result == DialogResult.OK)
             {
-                //selectPath = library_list.SelectedNode.FullPath.ToString();
+                selectPath = library_list.SelectedNode.FullPath.ToString();
                 //fullPath = Properties.Settings.Default.libraryPath + @"\" + selectPath;
-                //coverPath = fullPath + @"\cover.jpg";
+                coverPath = fullPath + @"\cover.jpg";
+                cover_textBox.Text = coverPath;
                 Properties.Settings.Default.tempCoverPath = choofdlog.FileName;
+                Properties.Settings.Default.Save();
+                imageToLoad_value.Text = "Image to Load: "+ Properties.Settings.Default.tempCoverPath;
+                imageToLoad_value.Visible = true;
+                //MessageBox.Show(Properties.Settings.Default.tempCoverPath);
                 coverPictureBox.ImageLocation = choofdlog.FileName;
-                string strFileName = System.IO.Path.GetFileName(coverPath);
-                string newName = choofdlog.FileName.Replace(System.IO.Path.GetFileName(choofdlog.FileName), strFileName);
-                cover_textBox.Text = newName;
+                //string strFileName = System.IO.Path.GetFileName(coverPath);
+                //string newName = choofdlog.FileName.Replace(System.IO.Path.GetFileName(choofdlog.FileName), strFileName);
                 save_button.Enabled = true;
+                
             }
         }
 

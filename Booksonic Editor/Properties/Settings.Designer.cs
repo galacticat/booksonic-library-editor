@@ -25,7 +25,7 @@ namespace Booksonic_Editor.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Library Test")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string libraryPath {
             get {
                 return ((string)(this["libraryPath"]));

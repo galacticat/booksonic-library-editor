@@ -32,7 +32,6 @@ E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\De
 E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Editor.pdb
 E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Booksonic Editor.exe
 E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Booksonic Editor.pdb
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csprojResolveAssemblyReference.cache
 E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Configuration.resources
 E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Editor.resources
 E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Properties.Resources.resources

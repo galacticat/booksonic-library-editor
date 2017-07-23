@@ -1,5 +1,5 @@
 # Booksonic Library Editor
-### Current Release: [Version 1.1.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
+### Current Release: [Version 1.1.1](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
 ![picture alt](https://github.com/galacticat/booksonic-library-editor/blob/master/Booksonic%20Library%20Editor.png)
 
 Instructions:
@@ -12,7 +12,11 @@ Instructions:
     ├── Book Series
     	├── Boook
 
-### Release Notes [Version 1.1.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
+### Release Notes [Version 1.1.1](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
+* Fixed a bug where adding the cover image would add it to the source directory instead of the audiobook directory
+* Added a label that displays where the image is coming from before save
+
+### Release Notes Version 1.1.0
 * Configure Button: Opens a configuration screen to set the Library Path, Java Path, and custom Script Path
 * Added the ability to run a custom script with the syntax <Java Path> -jar <Script Path> <Library Path>
 * Run Script Button: Only enables if a Script Path is entered in the Configure page

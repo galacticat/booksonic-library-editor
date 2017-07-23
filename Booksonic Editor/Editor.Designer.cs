@@ -46,6 +46,7 @@
             this.library_list = new System.Windows.Forms.TreeView();
             this.refresh_button = new System.Windows.Forms.Button();
             this.bookdata_groupBox = new System.Windows.Forms.GroupBox();
+            this.coverPictureBox = new System.Windows.Forms.PictureBox();
             this.coverPath_button = new System.Windows.Forms.Button();
             this.book_title = new System.Windows.Forms.Label();
             this.bookTitle_label = new System.Windows.Forms.Label();
@@ -60,7 +61,7 @@
             this.cover_textBox = new System.Windows.Forms.TextBox();
             this.libraryLoad_progressbar = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.coverPictureBox = new System.Windows.Forms.PictureBox();
+            this.imageToLoad_value = new System.Windows.Forms.Label();
             this.library_groupBox.SuspendLayout();
             this.bookdata_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
@@ -246,6 +247,7 @@
             this.bookdata_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.bookdata_groupBox.Controls.Add(this.imageToLoad_value);
             this.bookdata_groupBox.Controls.Add(this.coverPictureBox);
             this.bookdata_groupBox.Controls.Add(this.coverPath_button);
             this.bookdata_groupBox.Controls.Add(this.book_title);
@@ -266,6 +268,18 @@
             this.bookdata_groupBox.TabIndex = 4;
             this.bookdata_groupBox.TabStop = false;
             this.bookdata_groupBox.Text = "Book Data";
+            // 
+            // coverPictureBox
+            // 
+            this.coverPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.coverPictureBox.Enabled = false;
+            this.coverPictureBox.Location = new System.Drawing.Point(325, 19);
+            this.coverPictureBox.Name = "coverPictureBox";
+            this.coverPictureBox.Size = new System.Drawing.Size(100, 100);
+            this.coverPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.coverPictureBox.TabIndex = 15;
+            this.coverPictureBox.TabStop = false;
+            this.coverPictureBox.Click += new System.EventHandler(this.coverPictureBox_Click);
             // 
             // coverPath_button
             // 
@@ -410,17 +424,15 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // coverPictureBox
+            // imageToLoad_value
             // 
-            this.coverPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.coverPictureBox.Enabled = false;
-            this.coverPictureBox.Location = new System.Drawing.Point(325, 19);
-            this.coverPictureBox.Name = "coverPictureBox";
-            this.coverPictureBox.Size = new System.Drawing.Size(100, 100);
-            this.coverPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.coverPictureBox.TabIndex = 15;
-            this.coverPictureBox.TabStop = false;
-            this.coverPictureBox.Click += new System.EventHandler(this.coverPictureBox_Click);
+            this.imageToLoad_value.AutoSize = true;
+            this.imageToLoad_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imageToLoad_value.Location = new System.Drawing.Point(66, 155);
+            this.imageToLoad_value.Name = "imageToLoad_value";
+            this.imageToLoad_value.Size = new System.Drawing.Size(105, 13);
+            this.imageToLoad_value.TabIndex = 16;
+            this.imageToLoad_value.Text = "!ImageToLoadLabel!";
             // 
             // Editor
             // 
@@ -477,6 +489,7 @@
         private System.Windows.Forms.TextBox cover_textBox;
         private System.Windows.Forms.Button coverPath_button;
         private System.Windows.Forms.PictureBox coverPictureBox;
+        private System.Windows.Forms.Label imageToLoad_value;
     }
 }
 
