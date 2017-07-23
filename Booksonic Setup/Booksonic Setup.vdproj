@@ -56,6 +56,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
         "Release"
@@ -80,6 +88,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
     }
@@ -197,15 +213,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Booksonic Library Editor"
-        "ProductCode" = "8:{A14D161A-1FD2-4904-BB62-8B9AC82AA287}"
-        "PackageCode" = "8:{FCABAABA-75A1-430C-892D-19863D076098}"
+        "ProductCode" = "8:{B7354FCF-D850-4A1E-9CA2-EE8F6418811D}"
+        "PackageCode" = "8:{8DC2DA12-0553-4AA2-8FD1-B178F719655A}"
         "UpgradeCode" = "8:{70427521-136D-415F-B2A0-85E18948A4E7}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:Redneck IT"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

@@ -26,12 +26,48 @@ namespace Booksonic_Editor.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\Library Test")]
-        public string path {
+        public string libraryPath {
             get {
-                return ((string)(this["path"]));
+                return ((string)(this["libraryPath"]));
             }
             set {
-                this["path"] = value;
+                this["libraryPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string javaPath {
+            get {
+                return ((string)(this["javaPath"]));
+            }
+            set {
+                this["javaPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string scriptPath {
+            get {
+                return ((string)(this["scriptPath"]));
+            }
+            set {
+                this["scriptPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string tempCoverPath {
+            get {
+                return ((string)(this["tempCoverPath"]));
+            }
+            set {
+                this["tempCoverPath"] = value;
             }
         }
     }

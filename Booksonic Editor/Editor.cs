@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,12 +21,16 @@ namespace Booksonic_Editor
             this.KeyDown += new KeyEventHandler(Form_KeyDown);
 
             ToolTip toolTip1 = new ToolTip();
-            toolTip1.SetToolTip(search_button, "Enter");
-
-            toolTip1.SetToolTip(previousNode_button, "Page Up");
-            toolTip1.SetToolTip(nextNode_button, "Page Down");
-            toolTip1.SetToolTip(save_button, "Ctrl+S");
-
+            toolTip1.SetToolTip(search_button, "Applies the search filter" + Environment.NewLine + "Hotkey: Enter");
+            toolTip1.SetToolTip(previousNode_button, "Selects the previous book from the tree" + Environment.NewLine + "Hotkey: Page Up");
+            toolTip1.SetToolTip(nextNode_button, "Selects the next book from the tree" + Environment.NewLine + "Hotkey: Page Down");
+            toolTip1.SetToolTip(save_button, "Saves the reader.txt and desc.txt" + Environment.NewLine + "Hotkey: Ctrl+S");
+            toolTip1.SetToolTip(script_button, "Script Runs with the following syntax:" + Environment.NewLine + "<Java Path> -jar <Script Path> <Library Path>");
+            toolTip1.SetToolTip(coverPath_button, "Select the image to be used as the cover");
+            toolTip1.SetToolTip(coverPictureBox, "Click to see full image");
+            toolTip1.SetToolTip(refresh_button, "Reloads the Library Path");
+            toolTip1.SetToolTip(open_button, "Opens the Book Path");
+            toolTip1.SetToolTip(configure_button, "Set the path to the Library, Java Executable, and Script");
         }
 
         // Hot keys handler
@@ -61,21 +66,39 @@ namespace Booksonic_Editor
         {
             this.timer1.Interval = 1000;
             timer1.Start();
+            if (Properties.Settings.Default.scriptPath != String.Empty)
+            {
+                this.script_button.Enabled = true;
+            }
+            else
+            {
+                this.script_button.Enabled = false;
+            }
         }
                 
-        private void refresh_button_Click(object sender, EventArgs e)
+        public void refresh_button_Click(object sender, EventArgs e)
         {
             Load_Library(e, e);
         }
 
         private void configure_button_Click(object sender, EventArgs e)
         {
-            DialogResult result = LibraryBrowserDialog.ShowDialog();
-            if (result == DialogResult.OK)
+            Booksonic_Editor.Configuration settingsForm = new Configuration();
+            Configuration yeniform = new Configuration();
+            yeniform.FormClosing += new FormClosingEventHandler(this.Configuration_FormClosing);
+            yeniform.Show();
+        }
+
+        private void Configuration_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Load_Library(e, e);
+            if (Properties.Settings.Default.scriptPath != String.Empty)
             {
-                Properties.Settings.Default.path = LibraryBrowserDialog.SelectedPath;
-                Properties.Settings.Default.Save();
-                Load_Library(e, e);
+                this.script_button.Enabled = true;
+            }
+            else
+            {
+                this.script_button.Enabled = false;
             }
         }
 
@@ -93,19 +116,29 @@ namespace Booksonic_Editor
         private void save_button_Click(object sender, EventArgs e)
         {
             string selectPath = library_list.SelectedNode.FullPath.ToString();
-            string fullPath = Properties.Settings.Default.path + @"\" + selectPath;
+            string fullPath = Properties.Settings.Default.libraryPath + @"\" + selectPath;
             string readerPath = fullPath + @"\reader.txt";
+            string tempCoverPath = Properties.Settings.Default.tempCoverPath;
             string descPath = fullPath + @"\desc.txt";
             File.WriteAllText(readerPath, reader_textBox.Text);
             desc_textBox.SaveFile(descPath, RichTextBoxStreamType.PlainText);
+            System.IO.File.Copy(tempCoverPath,cover_textBox.Text);
+            Properties.Settings.Default.tempCoverPath = String.Empty;
             save_button.Enabled = false;
         }
 
         private void open_button_Click(object sender, EventArgs e)
         {
             string selectPath = library_list.SelectedNode.FullPath.ToString();
-            string fullPath = Properties.Settings.Default.path + @"\" + selectPath;
-            System.Diagnostics.Process.Start(fullPath);
+            string fullPath = Properties.Settings.Default.libraryPath + @"\" + selectPath;
+            if (Directory.Exists(fullPath))
+            {
+                System.Diagnostics.Process.Start(fullPath);
+            }
+            else
+            {
+                MessageBox.Show(String.Concat("Can not find:",Environment.NewLine,fullPath));
+            }
         }
 
         private List<TreeNode> CurrentNodeMatches = new List<TreeNode>();
@@ -190,63 +223,33 @@ namespace Booksonic_Editor
 
         }
 
-        private void Load_Library(object sender, EventArgs e)
+        public void Load_Library(object sender, EventArgs e)
         {
-            libraryLoad_progressbar.Visible = true;
-            libraryLoad_progressbar.Step = 1;
-            library_list.Nodes.Clear();
-            string yourRoot = Properties.Settings.Default.path;
+            this.libraryLoad_progressbar.Visible = true;
+            this.libraryLoad_progressbar.Step = 1;
+            this.library_list.Nodes.Clear();
+            string yourRoot = Properties.Settings.Default.libraryPath;
             if (System.IO.Directory.Exists(yourRoot))
             {
                 Cursor.Current = Cursors.WaitCursor;
-                library_list.Nodes.AddRange(getAllFolderNodes(yourRoot).ToArray());
-                libraryLoad_progressbar.PerformStep();
-                library_list.Sort();
-                libraryLoad_progressbar.PerformStep();
+                this.library_list.Nodes.AddRange(getAllFolderNodes(yourRoot).ToArray());
+                this.libraryLoad_progressbar.PerformStep();
+                this.library_list.Sort();
+                this.libraryLoad_progressbar.PerformStep();
                 Cursor.Current = Cursors.Default;
-                LibraryPath_value.Text = Properties.Settings.Default.path;
+                this.LibraryPath_value.Text = Properties.Settings.Default.libraryPath;
             }
             else
             {
-                LibraryPath_value.Text = "Directory Not Found";
+                this.LibraryPath_value.Text = "Directory Not Found";
             }
-            libraryLoad_progressbar.Visible = false;
+            this.libraryLoad_progressbar.Visible = false;
         }
-
-        //private void library_list_BeforeExpand(object sender, TreeViewCancelEventArgs e)
-        //{
-        //    TreeNode tn = e.Node.Nodes[0];
-        //    if (tn.Text == "...")
-        //    {
-        //        e.Node.Nodes.AddRange(getFolderNodes(((DirectoryInfo)e.Node.Tag)
-        //          .FullName, true).ToArray());
-        //        if (tn.Text == "...") tn.Parent.Nodes.Remove(tn);
-        //    }
-        //}
-
-        //List<TreeNode> getFolderNodes(string dir, bool expanded)
-        //{
-        //    var dirs = Directory.GetDirectories(dir).ToArray();
-        //    var nodes = new List<TreeNode>();
-        //    foreach (string d in dirs)
-        //    {
-        //        DirectoryInfo di = new DirectoryInfo(d);
-        //        TreeNode tn = new TreeNode(di.Name);
-        //        tn.Tag = di;
-        //        int subCount = 0;
-        //        try { subCount = Directory.GetDirectories(d).Count(); }
-        //        catch { /* ignore accessdenied */  }
-        //        if (subCount > 0) tn.Nodes.Add("...");
-        //        if (expanded) tn.Expand();   //  **
-        //        nodes.Add(tn);
-        //    }
-        //    return nodes;
-        //}
 
         List<TreeNode> getAllFolderNodes(string dir)
         {
             var dirs = Directory.GetDirectories(dir).ToArray();
-            libraryLoad_progressbar.Maximum = dirs.Count() + 2;
+            this.libraryLoad_progressbar.Maximum = dirs.Count() + 2;
             var nodes = new List<TreeNode>();
             foreach (string d in dirs)
             {
@@ -263,7 +266,7 @@ namespace Booksonic_Editor
                 }
                 nodes.Add(tn);
             }
-            libraryLoad_progressbar.PerformStep();
+            this.libraryLoad_progressbar.PerformStep();
             return nodes;
         }
 
@@ -271,13 +274,16 @@ namespace Booksonic_Editor
         {
             open_button.Enabled = true;
             string selectPath = library_list.SelectedNode.FullPath.ToString();
-            string fullPath = Properties.Settings.Default.path + @"\" + selectPath;
+            string fullPath = Properties.Settings.Default.libraryPath + @"\" + selectPath;
             string readerPath = fullPath + @"\reader.txt";
+            string coverPath = fullPath + @"\cover.jpg";
             string descPath = fullPath + @"\desc.txt";
             BookPath_value.Text = fullPath;
             if (library_list.SelectedNode.Nodes.Count == 0)
             {
                 reader_textBox.Enabled = true;
+                cover_textBox.Enabled = true;
+                coverPictureBox.Enabled = true;
                 desc_textBox.Enabled = true;
                 previousNode_button.Enabled = true;
                 nextNode_button.Enabled = true;
@@ -286,12 +292,15 @@ namespace Booksonic_Editor
             else
             {
                 reader_textBox.Enabled = false;
+                cover_textBox.Enabled = false;
+                coverPictureBox.Enabled = false;
                 desc_textBox.Enabled = false;
                 previousNode_button.Enabled = false;
                 nextNode_button.Enabled = false;
                 book_title.Text = "No Selection";
                 save_button.Enabled = false;
             }
+            //loads the reader.txt value
             if (System.IO.File.Exists(readerPath))
             {
                 reader_textBox.Text = File.ReadAllText(readerPath);     //GetTxtValue(readerPath);
@@ -300,6 +309,18 @@ namespace Booksonic_Editor
             {
                 reader_textBox.Text = String.Empty;
             }
+            //loads the cover.jpg
+            if (System.IO.File.Exists(coverPath))
+            {
+                cover_textBox.Text = coverPath;     //Sets path to cover.jpg;
+                coverPictureBox.ImageLocation = coverPath;
+            }
+            else
+            {
+                cover_textBox.Text = String.Empty;
+                coverPictureBox.ImageLocation = String.Empty;
+            }
+            //loads the desc.txt value
             if (System.IO.File.Exists(descPath))
             {
                 desc_textBox.Text = File.ReadAllText(descPath);     //GetTxtValue(descPath);
@@ -354,6 +375,72 @@ namespace Booksonic_Editor
         {
             timer1.Stop();
             refresh_button.PerformClick();
+        }
+
+        private void script_button_Click(object sender, EventArgs e)
+        {
+            string strCmdText = String.Concat("-jar ", "\"", Properties.Settings.Default.scriptPath, "\"", " ", "\"", Properties.Settings.Default.libraryPath, "\""); 
+            string output;
+            string error;
+            Process p = new Process();
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.FileName = Properties.Settings.Default.javaPath;
+            p.StartInfo.Arguments = strCmdText;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.RedirectStandardError = true;
+            p.Start();
+            output = p.StandardOutput.ReadToEnd();
+            error = p.StandardError.ReadToEnd();
+            p.WaitForExit();
+            if (String.IsNullOrEmpty(output))
+            {
+                output = "No Files Processed";
+            }
+            if (String.IsNullOrEmpty(error))
+            {
+                error = "No Errors";
+            }
+            MessageBox.Show(String.Concat("Output:",Environment.NewLine,Environment.NewLine, output, Environment.NewLine, "Errors:",Environment.NewLine, Environment.NewLine, error, Environment.NewLine,Environment.NewLine,"Press Ctrl+C to copy this dialog"),"Script Complete");
+        }
+
+        private void coverPath_button_Click(object sender, EventArgs e)
+        {
+            string selectPath = library_list.SelectedNode.FullPath.ToString();
+            string fullPath = Properties.Settings.Default.libraryPath + @"\" + selectPath;
+            string coverPath = fullPath + @"\cover.jpg";
+            OpenFileDialog choofdlog = new OpenFileDialog();
+            choofdlog.Filter = "Image (*.jpg)|*.jpg|All files (*.*)|*.*";
+            choofdlog.InitialDirectory = fullPath;
+            choofdlog.RestoreDirectory = true;
+            choofdlog.FilterIndex = 1;
+            choofdlog.Multiselect = false;
+            DialogResult result = choofdlog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                //selectPath = library_list.SelectedNode.FullPath.ToString();
+                //fullPath = Properties.Settings.Default.libraryPath + @"\" + selectPath;
+                //coverPath = fullPath + @"\cover.jpg";
+                Properties.Settings.Default.tempCoverPath = choofdlog.FileName;
+                coverPictureBox.ImageLocation = choofdlog.FileName;
+                string strFileName = System.IO.Path.GetFileName(coverPath);
+                string newName = choofdlog.FileName.Replace(System.IO.Path.GetFileName(choofdlog.FileName), strFileName);
+                cover_textBox.Text = newName;
+                save_button.Enabled = true;
+            }
+        }
+
+        private void coverPictureBox_Click(object sender, EventArgs e)
+        {
+            Form imageForm = new Form();
+            imageForm.AutoSize = true;
+            imageForm.FormBorderStyle = FormBorderStyle.FixedDialog;
+            PictureBox pictureBox1 = new PictureBox();
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.AutoSize = true;
+            pictureBox1.ImageLocation = coverPictureBox.ImageLocation;
+            imageForm.Controls.Add(pictureBox1);
+            imageForm.Show();
         }
     }
 

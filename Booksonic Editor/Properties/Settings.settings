@@ -2,8 +2,17 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Booksonic_Editor.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="path" Type="System.String" Scope="User">
+    <Setting Name="libraryPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Library Test</Value>
+    </Setting>
+    <Setting Name="javaPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="scriptPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="tempCoverPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
