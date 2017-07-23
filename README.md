@@ -1,5 +1,5 @@
 # Booksonic Library Editor
-### Current Release: [Version 1.0.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
+### Current Release: [Version 1.1.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
 ![picture alt](https://github.com/galacticat/booksonic-library-editor/blob/master/Booksonic%20Library%20Editor.png)
 
 Instructions:
@@ -12,7 +12,16 @@ Instructions:
     ├── Book Series
     	├── Boook
 
-### Release Notes [Version 1.0.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release):
+### Release Notes [Version 1.1.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
+* Configure Button: Opens a configuration screen to set the Library Path, Java Path, and custom Script Path
+* Added the ability to run a custom script with the syntax <Java Path> -jar <Script Path> <Library Path>
+* Run Script Button: Only enables if a Script Path is entered in the Configure page
+* Cover: Path to the cover.jpg file
+* Added a preview of the cover.jpg file. Clicking on the preview opens the full image
+* User can browse to the image desired to be used as the cover.jpg. Clicking Save will copy the image selected to the selected book directory and name it cover.jpg
+* Tooltip text updated with description and Hotekeys if applicable
+
+### Release Notes Version 1.0.0
 * Configure Button: Allows user to select the root location for their audiobook library
 * Refresh Button: Reloads the directory tree from the set Library Path
 * Search (Hotkey: Enter): Allows users to enter the name of a book or author and search for the tree node.
