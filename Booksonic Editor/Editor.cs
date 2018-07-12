@@ -461,13 +461,6 @@ namespace Booksonic_Editor
             imageForm.Controls.Add(pictureBox1);
             imageForm.Show();
         }
-
-        private void imgSearch_button_Click(object sender, EventArgs e)
-        {
-            Booksonic_Editor.imgSearch settingsForm = new imgSearch();
-            imgSearch yeniform = new imgSearch();
-            yeniform.Show();
-        }
     }
 
 }
