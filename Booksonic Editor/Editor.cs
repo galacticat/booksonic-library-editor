@@ -123,7 +123,10 @@ namespace Booksonic_Editor
             string readerPath = fullPath + @"\reader.txt";
             string tempCoverPath = Properties.Settings.Default.tempCoverPath;
             string descPath = fullPath + @"\desc.txt";
-            File.WriteAllText(readerPath, reader_textBox.Text);
+            RichTextBox rich = new RichTextBox();
+            rich.Text = reader_textBox.Text;
+            rich.SaveFile(readerPath, RichTextBoxStreamType.PlainText);
+            //File.WriteAllText(readerPath, reader_textBox.Text);
             desc_textBox.SaveFile(descPath, RichTextBoxStreamType.PlainText);
             if (tempCoverPath != String.Empty)
             { 
@@ -314,7 +317,7 @@ namespace Booksonic_Editor
             //loads the reader.txt value
             if (System.IO.File.Exists(readerPath))
             {
-                reader_textBox.Text = File.ReadAllText(readerPath);     //GetTxtValue(readerPath);
+                reader_textBox.Text = File.ReadAllText(descPath,Encoding.Default);     //GetTxtValue(readerPath);
             }
             else
             {
@@ -334,7 +337,7 @@ namespace Booksonic_Editor
             //loads the desc.txt value
             if (System.IO.File.Exists(descPath))
             {
-                desc_textBox.Text = File.ReadAllText(descPath);     //GetTxtValue(descPath);
+                desc_textBox.Text = File.ReadAllText(descPath,Encoding.Default);     //GetTxtValue(descPath);
             }
             else
             {
@@ -457,6 +460,13 @@ namespace Booksonic_Editor
             pictureBox1.ImageLocation = coverPictureBox.ImageLocation;
             imageForm.Controls.Add(pictureBox1);
             imageForm.Show();
+        }
+
+        private void imgSearch_button_Click(object sender, EventArgs e)
+        {
+            Booksonic_Editor.imgSearch settingsForm = new imgSearch();
+            imgSearch yeniform = new imgSearch();
+            yeniform.Show();
         }
     }
 

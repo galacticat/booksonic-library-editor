@@ -46,6 +46,8 @@
             this.library_list = new System.Windows.Forms.TreeView();
             this.refresh_button = new System.Windows.Forms.Button();
             this.bookdata_groupBox = new System.Windows.Forms.GroupBox();
+            this.imgSearch_button = new System.Windows.Forms.Button();
+            this.imageToLoad_value = new System.Windows.Forms.Label();
             this.coverPictureBox = new System.Windows.Forms.PictureBox();
             this.coverPath_button = new System.Windows.Forms.Button();
             this.book_title = new System.Windows.Forms.Label();
@@ -61,7 +63,6 @@
             this.cover_textBox = new System.Windows.Forms.TextBox();
             this.libraryLoad_progressbar = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.imageToLoad_value = new System.Windows.Forms.Label();
             this.library_groupBox.SuspendLayout();
             this.bookdata_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.coverPictureBox)).BeginInit();
@@ -247,6 +248,7 @@
             this.bookdata_groupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.bookdata_groupBox.Controls.Add(this.imgSearch_button);
             this.bookdata_groupBox.Controls.Add(this.imageToLoad_value);
             this.bookdata_groupBox.Controls.Add(this.coverPictureBox);
             this.bookdata_groupBox.Controls.Add(this.coverPath_button);
@@ -264,16 +266,36 @@
             this.bookdata_groupBox.Controls.Add(this.reader_textBox);
             this.bookdata_groupBox.Location = new System.Drawing.Point(370, 12);
             this.bookdata_groupBox.Name = "bookdata_groupBox";
-            this.bookdata_groupBox.Size = new System.Drawing.Size(437, 537);
+            this.bookdata_groupBox.Size = new System.Drawing.Size(486, 537);
             this.bookdata_groupBox.TabIndex = 4;
             this.bookdata_groupBox.TabStop = false;
             this.bookdata_groupBox.Text = "Book Data";
+            // 
+            // imgSearch_button
+            // 
+            this.imgSearch_button.Location = new System.Drawing.Point(406, 129);
+            this.imgSearch_button.Name = "imgSearch_button";
+            this.imgSearch_button.Size = new System.Drawing.Size(75, 23);
+            this.imgSearch_button.TabIndex = 17;
+            this.imgSearch_button.Text = "Search";
+            this.imgSearch_button.UseVisualStyleBackColor = true;
+            this.imgSearch_button.Click += new System.EventHandler(this.imgSearch_button_Click);
+            // 
+            // imageToLoad_value
+            // 
+            this.imageToLoad_value.AutoSize = true;
+            this.imageToLoad_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.imageToLoad_value.Location = new System.Drawing.Point(66, 155);
+            this.imageToLoad_value.Name = "imageToLoad_value";
+            this.imageToLoad_value.Size = new System.Drawing.Size(105, 13);
+            this.imageToLoad_value.TabIndex = 16;
+            this.imageToLoad_value.Text = "!ImageToLoadLabel!";
             // 
             // coverPictureBox
             // 
             this.coverPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.coverPictureBox.Enabled = false;
-            this.coverPictureBox.Location = new System.Drawing.Point(325, 19);
+            this.coverPictureBox.Location = new System.Drawing.Point(373, 15);
             this.coverPictureBox.Name = "coverPictureBox";
             this.coverPictureBox.Size = new System.Drawing.Size(100, 100);
             this.coverPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -319,7 +341,7 @@
             this.desc_textBox.Enabled = false;
             this.desc_textBox.Location = new System.Drawing.Point(6, 184);
             this.desc_textBox.Name = "desc_textBox";
-            this.desc_textBox.Size = new System.Drawing.Size(423, 302);
+            this.desc_textBox.Size = new System.Drawing.Size(472, 302);
             this.desc_textBox.TabIndex = 11;
             this.desc_textBox.Text = "";
             this.desc_textBox.TextChanged += new System.EventHandler(this.BookData_textBox_TextChanged);
@@ -415,7 +437,7 @@
             this.libraryLoad_progressbar.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.libraryLoad_progressbar.Location = new System.Drawing.Point(0, 549);
             this.libraryLoad_progressbar.Name = "libraryLoad_progressbar";
-            this.libraryLoad_progressbar.Size = new System.Drawing.Size(819, 12);
+            this.libraryLoad_progressbar.Size = new System.Drawing.Size(868, 12);
             this.libraryLoad_progressbar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.libraryLoad_progressbar.TabIndex = 5;
             this.libraryLoad_progressbar.Visible = false;
@@ -424,21 +446,11 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // imageToLoad_value
-            // 
-            this.imageToLoad_value.AutoSize = true;
-            this.imageToLoad_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.imageToLoad_value.Location = new System.Drawing.Point(66, 155);
-            this.imageToLoad_value.Name = "imageToLoad_value";
-            this.imageToLoad_value.Size = new System.Drawing.Size(105, 13);
-            this.imageToLoad_value.TabIndex = 16;
-            this.imageToLoad_value.Text = "!ImageToLoadLabel!";
-            // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 561);
+            this.ClientSize = new System.Drawing.Size(868, 561);
             this.Controls.Add(this.libraryLoad_progressbar);
             this.Controls.Add(this.bookdata_groupBox);
             this.Controls.Add(this.library_groupBox);
@@ -490,6 +502,7 @@
         private System.Windows.Forms.Button coverPath_button;
         private System.Windows.Forms.PictureBox coverPictureBox;
         private System.Windows.Forms.Label imageToLoad_value;
+        private System.Windows.Forms.Button imgSearch_button;
     }
 }
 
