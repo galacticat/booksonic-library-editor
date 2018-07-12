@@ -1,5 +1,5 @@
 # Booksonic Library Editor
-### Current Release: [Version 1.1.1](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
+### Current Release: [Version 1.2.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
 ![picture alt](https://github.com/galacticat/booksonic-library-editor/blob/master/Booksonic%20Library%20Editor.png)
 
 Instructions:
@@ -12,7 +12,11 @@ Instructions:
     ├── Book Series
     	├── Boook
 
-### Release Notes [Version 1.1.1](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
+### Release Notes [Version 1.2.0](https://github.com/galacticat/booksonic-library-editor/tree/master/Booksonic%20Setup/Release)
+* Narrator text box now saves file as Plain Text
+* All file readers now using Encoding.Default
+
+### Release Notes Version 1.1.1
 * Fixed a bug where adding the cover image would add it to the source directory instead of the audiobook directory
 * Added a label that displays where the image is coming from before save
 
