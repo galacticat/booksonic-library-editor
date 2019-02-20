@@ -28,49 +28,15 @@ C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj
 C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Properties.Resources.resources
 C:\Users\chris.garcia\Source\Repos\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csproj.GenerateResource.Cache
 E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Booksonic Editor.exe.config
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Editor.exe
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Editor.pdb
 E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Booksonic Editor.exe
 E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Booksonic Editor.pdb
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Configuration.resources
+E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\log4net.dll
+E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\log4net.xml
+E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csprojAssemblyReference.cache
 E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Editor.resources
 E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic_Editor.Properties.Resources.resources
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csproj.GenerateResource.Cache
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Google.Apis.Core.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Google.Apis.Customsearch.v1.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Google.Apis.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Google.Apis.PlatformServices.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\log4net.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Microsoft.Threading.Tasks.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Newtonsoft.Json.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.IO.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Net.Http.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Net.Http.Extensions.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Net.Http.Primitives.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Net.Http.WebRequest.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Runtime.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Threading.Tasks.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Zlib.Portable.dll
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Google.Apis.pdb
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Google.Apis.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Google.Apis.Core.pdb
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Google.Apis.Core.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Google.Apis.Customsearch.v1.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Google.Apis.PlatformServices.pdb
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Google.Apis.PlatformServices.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\log4net.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Microsoft.Threading.Tasks.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Newtonsoft.Json.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.IO.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Net.Http.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Net.Http.Extensions.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Net.Http.Primitives.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Net.Http.WebRequest.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Runtime.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\System.Threading.Tasks.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\bin\Debug\Zlib.Portable.xml
-E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic_Editor.imgSearch.resources
+E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csproj.GenerateResource.cache
+E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csproj.CoreCompileInputs.cache
+E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Library Editor.csproj.CopyComplete
+E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Editor.exe
+E:\Users\Chris\Documents\GitHub\booksonic-library-editor\Booksonic Editor\obj\Debug\Booksonic Editor.pdb
