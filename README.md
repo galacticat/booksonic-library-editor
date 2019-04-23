@@ -2,7 +2,10 @@
 ### Current Release: [Latest Version](https://github.com/galacticat/booksonic-library-editor/releases)
 ![picture alt](https://github.com/galacticat/booksonic-library-editor/blob/master/Booksonic%20Library%20Editor.png)
 
-Instructions:
+#### Requirements:
+~ .NET 4.0 or greater
+
+#### Instructions:
 1. Download the zip.
 2. Extract the files
 3. Run the setup.exe
