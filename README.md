@@ -3,7 +3,7 @@
 ![picture alt](https://github.com/galacticat/booksonic-library-editor/blob/master/Booksonic%20Library%20Editor.png)
 
 #### Requirements:
-~ .NET 4.0 or greater
+* .NET 4.0 or greater
 
 #### Instructions:
 1. Download the zip.
