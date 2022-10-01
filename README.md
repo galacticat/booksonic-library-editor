@@ -1,4 +1,7 @@
 # Booksonic Library Editor
+
+I am no longer using Booksonic and have switched to using [audiobookshelf(https://github.com/advplyr/audiobookshelf)
+
 ### Current Release: [Latest Version](https://github.com/galacticat/booksonic-library-editor/releases)
 ![picture alt](https://github.com/galacticat/booksonic-library-editor/blob/master/Booksonic%20Library%20Editor.png)
 
